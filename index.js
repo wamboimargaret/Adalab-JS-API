@@ -6,9 +6,11 @@ const getUsers=()=>{
     .catch(error=> error.message)
 }
 getUsers()
+
 const displayUsers=async()=>{
     const users=await getUsers();
     console.log(users.users)
+    
     users.users.map(item=>{ //this will help each user to access their details
        let div = document.createElement('div')
        div.className ='people';
